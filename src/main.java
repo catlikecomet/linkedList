@@ -9,10 +9,12 @@ public class main {
         linkedList.addNode("idonotlikethislinkedlist");
         System.out.println(linkedList.getLastNode().value);
 
+        linkedList.addNode("ebkekjewfcqer");
+
         System.out.println(linkedList.contains("idonotlikethislinkedlist"));
         System.out.println(linkedList.contains("khbibljhbvblub"));
 
-        linkedList.deleteNode(1);
 
+        linkedList.deleteNode(1);
     }
 }

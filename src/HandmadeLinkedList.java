@@ -18,6 +18,10 @@ public class HandmadeLinkedList {
         return firstNode;
     }
 
+    public Node setNextNode(Node node) {
+        return node.nextNode;
+    }
+
     public Node getLastNode() {
         return firstNode.getLast();
     }
@@ -39,11 +43,14 @@ public class HandmadeLinkedList {
         int count = 0;
         Node node = firstNode;
 
+
         if (node.nextNode != null) {
             count++;
         }
 
-        if (index == count) {
+        if (index - 1 == count) {
+            node.nextNode  = node.nextNode.nextNode;
+            this.setNextNode(node.nextNode.nextNode);
 
         }
     }
@@ -75,5 +82,9 @@ class Node {
         }
 
         return nextNode.nodeContains(value);
+    }
+
+    public void setNextNode (Node node) {
+        this.nextNode = node;
     }
 }
