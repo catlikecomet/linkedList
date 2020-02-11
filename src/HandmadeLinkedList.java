@@ -1,6 +1,7 @@
 
 public class HandmadeLinkedList {
     Node firstNode;
+    Node nextNode;
 
     public void setCurrentNode(String value) {
         Node node = new Node();
@@ -20,6 +21,10 @@ public class HandmadeLinkedList {
 
     public Node setNextNode(Node node) {
         return node.nextNode;
+    }
+
+    public Node getNextNode() {
+        return nextNode;
     }
 
     public Node getLastNode() {
@@ -49,16 +54,18 @@ public class HandmadeLinkedList {
         }
 
         if (index - 1 == count) {
-            node.nextNode  = node.nextNode.nextNode;
-            this.setNextNode(node.nextNode.nextNode);
+            nextNode  = nextNode.nextNode;
 
         }
     }
 
-//    public String[] fullLinkedList(String value) {
-//        String[] list = new String[20];
-//        list[0] = value;
-//    }
+    public String[] fullLinkedList() {
+        String[] list = new String[20];
+        for (int i = 0; i < list.length; i++) {
+            list[i] = ;
+        }
+        return list;
+    }
 }
 
 class Node {
@@ -87,4 +94,5 @@ class Node {
     public void setNextNode (Node node) {
         this.nextNode = node;
     }
+
 }

@@ -16,5 +16,8 @@ public class main {
 
 
         linkedList.deleteNode(1);
+        System.out.println(linkedList.getNextNode());
+
+        linkedList.fullLinkedList()
     }
 }
